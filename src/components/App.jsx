@@ -1,23 +1,28 @@
-import {Profile} from "../Profile/profile";
-import user from '../Profile/user.json';
+import user from "../data/user.json";
+import data from "../data/statistic.json";
+import friends from "../data/friends.json";
+import transactions from "../data/transactions.json";
 
-// import { StatisticsList } from "./StatisticsList";
-// import data from './data.json';
+import User from "../components/User/User.js";
+import Statist from "./Statistic/Statistic";
+import FriendList from "./Friends/FriendList";
+import TransactionHistory from "./Transaction/Transaction";
 
-// import { FriendList } from "./FriendList";
-// import friends from './friends.json';
-
-// import { TransactionHistory } from "./TransactionHistory";
-// import transactions from './transactions.json';
-
-export const App = () => {
+export function App() {
   return (
+    <>
+      <User
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+      <Statist title="Uploads stats" stats={data} />
 
-    <div>
-      <Profile item={user} />;
-      {/* <StatisticsList items={data} />; */}
-      {/* <FriendList items={friends} />; */}
-      {/* <TransactionHistory items={transactions} />; */}
-    </div>
+      <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
+    </>
   );
-};
+}
