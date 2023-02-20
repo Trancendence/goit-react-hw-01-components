@@ -35,4 +35,7 @@ User.propTypes = {
   location: PropTypes.string,
   avatar: PropTypes.string,
   stats: PropTypes.objectOf(PropTypes.number),
+  likes: PropTypes.number,
+  views: PropTypes.number,
+  followers: PropTypes.number,
 };

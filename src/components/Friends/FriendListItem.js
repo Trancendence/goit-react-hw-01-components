@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 export default function FriendListItem({ friend }) {
   console.log(friend);
   return (
-    <>
-      {
-       <>
+      <>
           <span className={friend.isOnline ? css.online : css.offline}></span>
 
           <img 
@@ -16,9 +14,7 @@ export default function FriendListItem({ friend }) {
             width="48" />
 
           <p className={css.name}> {friend.name}</p>
-          </>
-      }
-     </>
+      </>
   );
 }
 

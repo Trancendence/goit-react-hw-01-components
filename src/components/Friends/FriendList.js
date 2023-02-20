@@ -18,3 +18,4 @@ export default function friendList({ friends }) {
 friendList.propTypes = {
   friends: PropTypes.arrayOf(PropTypes.object),
 };
+
